@@ -6,7 +6,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { origin } = absoluteUrl(context.req);
+  // const { origin } = absoluteUrl(context.req);
+  const origin = process.env.VERCEL_URL;
   const res = await fetch(`${origin}/api/names`);
   const data: { names: string[] } = await res.json();
 
