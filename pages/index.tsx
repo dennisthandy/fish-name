@@ -50,6 +50,9 @@ const Home: NextPage = ({
         {selectedName && (
           <strong className="my-8 text-4xl text-orange-600">{selectedName}</strong>
         )}
+        {!selectedName && (
+          <strong className="my-8 text-4xl text-orange-600">???</strong>
+        )}
         <button
           onClick={handleSelecteName}
           className="px-8 py-2 text-white bg-pink-600 rounded-lg place-self-center"
